@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cola.shortUrl.mapper.LinkAccessStatisticsMapper">
+
+
+    <insert id="insertLog" parameterType="com.cola.shortUrl.domain.LinkAccessStatist"
+            useGeneratedKeys="true" keyProperty="id">
+        insert into link_access_statistics
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="shortLinkId != null">short_link_id,</if>
+            <if test="ip != null">ip,</if>
+            <if test="address != null">address,</if>
+            <if test="terminal != null">terminal,</if>
+            <if test="userAgent != null">user_agent,</if>
+            <if test="createTime != null">create_time,</if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="shortLinkId != null">#{shortLinkId},</if>
+            <if test="ip != null">#{ip},</if>
+            <if test="address != null">#{address},</if>
+            <if test="terminal != null">#{terminal},</if>
+            <if test="userAgent != null">#{userAgent},</if>
+            <if test="createTime != null">#{createTime},</if>
+        </trim>
+    </insert>
+
+
+</mapper>
