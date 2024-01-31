@@ -1,4 +1,4 @@
-基于若依框架二开前后端分离的引流工具系统（技术栈：springboot+vue+docker+redis等等）
+前后端分离的引流工具系统（技术栈：springboot+vue+docker+redis等等）基于若依框架二开
 -------------------------------
 演示网站：https://www.ylb6.cn
 ps:目前只有普通用户开放演示
